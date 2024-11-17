@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$very-dark-blue: hsl(159, 64%, 13%);
+$dark-greyish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $cream;
+  font-family: "Montserrat", "Fraunces", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  background-color: $white;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  .cover-img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .txt-content {
+    display: flex;
+    justify-content: left;
+    gap: 1.2rem;
+    flex-direction: column;
+    font-family: "Montserrat", serif;
+    padding: 3rem;
+    width: 50%;
+
+    h4 {
+      color: $dark-greyish-blue;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $dark-greyish-blue;
+      line-height: 2.5rem;
+      font-weight: 500;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      h2 {
+        color: $dark-cyan;
+        font-size: 3rem;
+        font-family: "Fraunces", serif;
+      }
+
+      p {
+        text-decoration: line-through;
+      }
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background-color: $dark-cyan;
+      justify-content: center;
+      border-radius: 1rem;
+
+      img {
+        width: 1.5rem;
+      }
+
+      button {
+        color: $white;
+        background: none;
+        border: none;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      &:hover {
+        background-color: $very-dark-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+
+    .cover-img {
+      width: 100%;
+      height: 240px;
+    }
+    .txt-content {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+}
